@@ -1,0 +1,18 @@
+// your_service.proto
+syntax = "proto3";
+
+package proto;
+
+option go_package = "go-microserver/server;proto";
+
+service HelloGRPC {
+  rpc HelloGRPC (HelloReq) returns (HelloResp);
+}
+
+message HelloReq {
+  string name = 1;
+}
+
+message HelloResp {
+  string message = 1;
+}
